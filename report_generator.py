@@ -4,7 +4,7 @@ from nltk.tokenize import word_tokenize
 import string
 import re
 
-report_path = "report.html"
+report_path = "./results/report.html"
 class ReportGenerator:
 
     def __init__(self):
