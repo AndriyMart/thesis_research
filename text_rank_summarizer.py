@@ -6,19 +6,16 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 import nltk
 from nltk.corpus import stopwords
 
-class TextRankClassifier:
+
+class TextRankSummariser:
 
     def __init__(self):
-        pass
-
-    def text_rank(self, file_path, n):
         nltk.download('punkt')
         nltk.download('stopwords')
+        pass
 
+    def summarize(self, text, n=3):
         stop_words = stopwords.words('english')
-
-        # Read the text from the file
-        text = self._read_text_from_file(file_path)
 
         # Tokenize the text and remove stopwords
         sentences = sent_tokenize(text)
@@ -57,8 +54,3 @@ class TextRankClassifier:
                 if i != j:
                     sim_mat[i][j] = cosine_similarity(sentences[i].reshape(1, -1), sentences[j].reshape(1, -1))[0, 0]
         return sim_mat
-
-    def _read_text_from_file(self, file_path):
-        with open(file_path, 'r') as file:
-            data = file.read().replace('\n', '')
-        return data

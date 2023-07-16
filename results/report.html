@@ -1,6 +1,488 @@
 
-        <h1>Reference</h1>
-        <p><span style="background-color: #FFFF00">US</span> media giant TimeWarner reported a <span style="background-color: #FFFF00">76</span> <span style="background-color: #FFFF00">%</span> jump in quarterly profits to <span style="background-color: #FFFF00">$</span> 1.13bn <span style="background-color: #FFFF00">(</span> £600m <span style="background-color: #FFFF00">)</span> for the last <span style="background-color: #FFFF00">three</span> months of the previous year <span style="background-color: #FFFF00">,</span> driven by <span style="background-color: #FFFF00">sales</span> of <span style="background-color: #FFFF00">high-speed</span> internet connections and <span style="background-color: #FFFF00">higher</span> advertising <span style="background-color: #FFFF00">sales</span> <span style="background-color: #FFFF00">.</span> Despite a decrease in <span style="background-color: #FFFF00">AOL</span> users and lower profits at Warner Bros <span style="background-color: #FFFF00">,</span> one-off gains offset these losses <span style="background-color: #FFFF00">.</span> The company <span style="background-color: #FFFF00">,</span> which owns an <span style="background-color: #FFFF00">8</span> <span style="background-color: #FFFF00">%</span> stake in Google <span style="background-color: #FFFF00">,</span> plans to increase <span style="background-color: #FFFF00">AOL</span> 's subscribers by offering free online services to TimeWarner internet customers <span style="background-color: #FFFF00">.</span> Despite a fall in the film division 's profits <span style="background-color: #FFFF00">,</span> TimeWarner 's annual profit grew by 27 <span style="background-color: #FFFF00">%</span> <span style="background-color: #FFFF00">,</span> with revenues rising by 6.4 <span style="background-color: #FFFF00">%</span> <span style="background-color: #FFFF00">.</span> The company is currently restating its 2000 and 2003 accounts due to an inquiry by the <span style="background-color: #FFFF00">US</span> Securities Exchange Commission into <span style="background-color: #FFFF00">AOL</span> <span style="background-color: #FFFF00">.</span> </p>
-        <h1>Summary</h1>
-        <p>Ad <span style="background-color: #FFFF00">sales</span> boost Time Warner profitQuarterly profits <span style="background-color: #FFFF00">US</span> media giant TimeWarner jumped <span style="background-color: #FFFF00">76</span> <span style="background-color: #FFFF00">%</span> <span style="background-color: #FFFF00">$</span> 1.13bn <span style="background-color: #FFFF00">(</span> £600m <span style="background-color: #FFFF00">)</span> <span style="background-color: #FFFF00">three</span> months December <span style="background-color: #FFFF00">,</span> <span style="background-color: #FFFF00">$</span> 639m year-earlier.The firm <span style="background-color: #FFFF00">,</span> one biggest investors Google <span style="background-color: #FFFF00">,</span> benefited <span style="background-color: #FFFF00">sales</span> <span style="background-color: #FFFF00">high-speed</span> internet connections <span style="background-color: #FFFF00">higher</span> advert <span style="background-color: #FFFF00">sales</span> <span style="background-color: #FFFF00">.</span> However <span style="background-color: #FFFF00">,</span> company said <span style="background-color: #FFFF00">AOL</span> 's underlying profit exceptional items rose <span style="background-color: #FFFF00">8</span> <span style="background-color: #FFFF00">%</span> back stronger internet advertising revenues <span style="background-color: #FFFF00">.</span> </p>
-        
+            <div style='width: 100%; display: flex; flex-direction: column; align-items: center;'>
+                <div style="font-family: Arial, sans-serif; margin: 0 auto; padding: 20px; max-width: 800px;">
+                    <h1 style="color: #2d3748;">Average ROUGE Scores</h1><table style="width:100%; border-collapse: collapse; margin: 20px 0; margin-bottom: 40px;">
+            <tr style="background-color: #edf2f7;">
+                <th style="padding: 10px 0;">Score Type</th>
+                <th style="padding: 10px 0;">TextRank Score</th> 
+                <th style="padding: 10px 0;">BERT Score</th> 
+                <th style="padding: 10px 0;">Comments</th>
+            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-1-r</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.29</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.23</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Measures the overlap of <b>unigram (single word)</b> sequences between the generated summary and the reference summary, taking into account the recall (R) aspect. A higher recall score indicates that the generated summary contains a significant portion of the information present in the reference summary.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-1-p</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.48</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.44</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Takes into account the precision (P) aspect. A higher precision score indicates that the generated summary contains a higher proportion of information that is directly relevant to the reference summary.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-1-f</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.36</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.30</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Combines both the precision (P) and recall (R) aspects.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-2-r</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.09</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.06</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Focuses on the overlap of <b>bigram (two-word)</b> sequences. Considers the recall (R) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-2-p</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.16</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.13</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Focuses on the overlap of <b>bigram (two-word)</b> sequences. Takes into account the precision (P) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-2-f</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.12</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.08</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Combines both the precision (P) and recall (R) aspects.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-l-r</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.28</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.21</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Measures the overlap of <b>Longest Common Subsequences</b> (LCS) between the generated summary and the reference summary. Considers the recall (R) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-l-p</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.46</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.41</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Measures the overlap of <b>Longest Common Subsequences</b> (LCS). Considers the recall (R) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-l-f</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.34</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.28</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Combines both the precision (P) and recall (R) aspects.</td>
+                            </tr></table> 
+            <div style="margin:20px 0; border-top: 1px dashed lightgrey;">
+                <h1 style="color: #2d3748;">Report #1</h1>
+                <h2 style="color: #2d3748;">Original</h2>
+                <p style="color: #4a5568;"><span style="background-color: #9cd59d6b">Dollar</span> <span style="background-color: #9cd59d6b">gains</span> on <span style="background-color: #9cd59d6b">Greenspan</span> <span style="background-color: #9cd59d6b">speechThe</span> <span style="background-color: #9cd59d6b">dollar</span> has <span style="background-color: #9cd59d6b">hit</span> its <span style="background-color: #9cd59d6b">highest</span> <span style="background-color: #9cd59d6b">level</span> against the <span style="background-color: #9cd59d6b">euro</span> in <span style="background-color: #9cd59d6b">almost</span> <span style="background-color: #9cd59d6b">three</span> <span style="background-color: #9cd59d6b">months</span> after the <span style="background-color: #9cd59d6b">Federal</span> <span style="background-color: #9cd59d6b">Reserve</span> <span style="background-color: #9cd59d6b">head</span> <span style="background-color: #9cd59d6b">said</span> the <span style="background-color: #9cd59d6b">US</span> <span style="background-color: #9cd59d6b">trade</span> <span style="background-color: #9cd59d6b">deficit</span> is <span style="background-color: #9cd59d6b">set</span> to <span style="background-color: #9cd59d6b">stabilise.And</span> <span style="background-color: #9cd59d6b">Alan</span> <span style="background-color: #9cd59d6b">Greenspan</span> <span style="background-color: #9cd59d6b">highlighted</span> the <span style="background-color: #9cd59d6b">US</span> <span style="background-color: #9cd59d6b">government</span> <span style="background-color: #9cd59d6b">'s</span> <span style="background-color: #9cd59d6b">willingness</span> to <span style="background-color: #9cd59d6b">curb</span> <span style="background-color: #9cd59d6b">spending</span> and <span style="background-color: #9cd59d6b">rising</span> <span style="background-color: #9cd59d6b">household</span> <span style="background-color: #9cd59d6b">savings</span> as <span style="background-color: #9cd59d6b">factors</span> which <span style="background-color: #9cd59d6b">may</span> <span style="background-color: #9cd59d6b">help</span> to <span style="background-color: #9cd59d6b">reduce</span> it <span style="background-color: #9cd59d6b">.</span> In late trading in <span style="background-color: #9cd59d6b">New</span> <span style="background-color: #9cd59d6b">York</span> <span style="background-color: #9cd59d6b">,</span> the <span style="background-color: #9cd59d6b">dollar</span> reached <span style="background-color: #9cd59d6b">$</span> 1.2871 against the <span style="background-color: #9cd59d6b">euro</span> <span style="background-color: #9cd59d6b">,</span> from <span style="background-color: #9cd59d6b">$</span> 1.2974 on Thursday <span style="background-color: #9cd59d6b">.</span> Market concerns about the <span style="background-color: #9cd59d6b">deficit</span> has <span style="background-color: #9cd59d6b">hit</span> the greenback in <span style="background-color: #9cd59d6b">recent</span> <span style="background-color: #9cd59d6b">months</span> <span style="background-color: #9cd59d6b">.</span> On Friday <span style="background-color: #9cd59d6b">,</span> <span style="background-color: #9cd59d6b">Federal</span> <span style="background-color: #9cd59d6b">Reserve</span> <span style="background-color: #9cd59d6b">chairman</span> Mr <span style="background-color: #9cd59d6b">Greenspan</span> <span style="background-color: #9cd59d6b">'s</span> speech in London ahead of the meeting of G7 finance ministers sent the <span style="background-color: #9cd59d6b">dollar</span> higher after it had earlier tumbled on the back of worse-than-expected <span style="background-color: #9cd59d6b">US</span> jobs data <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">``</span> <span style="background-color: #9cd59d6b">I</span> <span style="background-color: #9cd59d6b">think</span> the <span style="background-color: #9cd59d6b">chairman</span> <span style="background-color: #9cd59d6b">'s</span> <span style="background-color: #9cd59d6b">taking</span> a <span style="background-color: #9cd59d6b">much</span> more <span style="background-color: #9cd59d6b">sanguine</span> <span style="background-color: #9cd59d6b">view</span> on the <span style="background-color: #9cd59d6b">current</span> <span style="background-color: #9cd59d6b">account</span> <span style="background-color: #9cd59d6b">deficit</span> than he <span style="background-color: #9cd59d6b">'s</span> <span style="background-color: #9cd59d6b">taken</span> for some <span style="background-color: #9cd59d6b">time</span> <span style="background-color: #9cd59d6b">,</span> <span style="background-color: #9cd59d6b">''</span> <span style="background-color: #9cd59d6b">said</span> <span style="background-color: #9cd59d6b">Robert</span> <span style="background-color: #9cd59d6b">Sinche</span> <span style="background-color: #9cd59d6b">,</span> <span style="background-color: #9cd59d6b">head</span> of <span style="background-color: #9cd59d6b">currency</span> <span style="background-color: #9cd59d6b">strategy</span> at <span style="background-color: #9cd59d6b">Bank</span> of <span style="background-color: #9cd59d6b">America</span> in <span style="background-color: #9cd59d6b">New</span> <span style="background-color: #9cd59d6b">York</span> <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">``</span> He <span style="background-color: #9cd59d6b">'s</span> <span style="background-color: #9cd59d6b">taking</span> a longer-term <span style="background-color: #9cd59d6b">view</span> <span style="background-color: #9cd59d6b">,</span> laying out a <span style="background-color: #9cd59d6b">set</span> of conditions under which the <span style="background-color: #9cd59d6b">current</span> <span style="background-color: #9cd59d6b">account</span> <span style="background-color: #9cd59d6b">deficit</span> can improve this year and next <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">``</span> Worries about the <span style="background-color: #9cd59d6b">deficit</span> concerns about <span style="background-color: #9cd59d6b">China</span> do <span style="background-color: #9cd59d6b">,</span> however <span style="background-color: #9cd59d6b">,</span> remain <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">China</span> <span style="background-color: #9cd59d6b">'s</span> <span style="background-color: #9cd59d6b">currency</span> <span style="background-color: #9cd59d6b">remains</span> <span style="background-color: #9cd59d6b">pegged</span> to the <span style="background-color: #9cd59d6b">dollar</span> and the <span style="background-color: #9cd59d6b">US</span> <span style="background-color: #9cd59d6b">currency</span> <span style="background-color: #9cd59d6b">'s</span> <span style="background-color: #9cd59d6b">sharp</span> <span style="background-color: #9cd59d6b">falls</span> in <span style="background-color: #9cd59d6b">recent</span> <span style="background-color: #9cd59d6b">months</span> have <span style="background-color: #9cd59d6b">therefore</span> <span style="background-color: #9cd59d6b">made</span> <span style="background-color: #9cd59d6b">Chinese</span> <span style="background-color: #9cd59d6b">export</span> <span style="background-color: #9cd59d6b">prices</span> <span style="background-color: #9cd59d6b">highly</span> <span style="background-color: #9cd59d6b">competitive</span> <span style="background-color: #9cd59d6b">.</span> But calls for a shift in Beijing <span style="background-color: #9cd59d6b">'s</span> policy have fallen on deaf ears <span style="background-color: #9cd59d6b">,</span> despite <span style="background-color: #9cd59d6b">recent</span> comments in a major <span style="background-color: #9cd59d6b">Chinese</span> newspaper that the <span style="background-color: #9cd59d6b">``</span> <span style="background-color: #9cd59d6b">time</span> is ripe <span style="background-color: #9cd59d6b">''</span> for a loosening of the peg <span style="background-color: #9cd59d6b">.</span> The G7 meeting is thought unlikely to produce any meaningful movement in <span style="background-color: #9cd59d6b">Chinese</span> policy <span style="background-color: #9cd59d6b">.</span> In the meantime <span style="background-color: #9cd59d6b">,</span> the <span style="background-color: #9cd59d6b">US</span> <span style="background-color: #9cd59d6b">Federal</span> <span style="background-color: #9cd59d6b">Reserve</span> <span style="background-color: #9cd59d6b">'s</span> decision on 2 February to boost interest rates by a quarter of a point <span style="background-color: #9cd59d6b">-</span> the sixth such move in as many <span style="background-color: #9cd59d6b">months</span> <span style="background-color: #9cd59d6b">-</span> has opened up a differential with European rates <span style="background-color: #9cd59d6b">.</span> The half-point window <span style="background-color: #9cd59d6b">,</span> some believe <span style="background-color: #9cd59d6b">,</span> could be enough to keep <span style="background-color: #9cd59d6b">US</span> assets looking more attractive <span style="background-color: #9cd59d6b">,</span> and could <span style="background-color: #9cd59d6b">help</span> prop up the <span style="background-color: #9cd59d6b">dollar</span> <span style="background-color: #9cd59d6b">.</span> The <span style="background-color: #9cd59d6b">recent</span> <span style="background-color: #9cd59d6b">falls</span> have partly been the result of big budget deficits <span style="background-color: #9cd59d6b">,</span> as well as the <span style="background-color: #9cd59d6b">US</span> <span style="background-color: #9cd59d6b">'s</span> yawning <span style="background-color: #9cd59d6b">current</span> <span style="background-color: #9cd59d6b">account</span> gap <span style="background-color: #9cd59d6b">,</span> both of which need to be funded by the buying of <span style="background-color: #9cd59d6b">US</span> bonds and assets by foreign firms and governments <span style="background-color: #9cd59d6b">.</span> The White House will announce its budget on Monday <span style="background-color: #9cd59d6b">,</span> and many commentators believe the <span style="background-color: #9cd59d6b">deficit</span> will remain at close to half a trillion dollars <span style="background-color: #9cd59d6b">.</span> </p>
+                <h2 style="color: #2d3748; margin-top: 20px;">TextRank Summary</h2>
+                <p style="color: #4a5568;">Dollar gains Greenspan speechThe dollar hit highest level euro almost three months Federal Reserve head said US trade deficit set stabilise.And Alan Greenspan highlighted US government 's willingness curb spending rising household savings factors may help reduce . China 's currency remains pegged dollar US currency 's sharp falls recent months therefore made Chinese export prices highly competitive . `` I think chairman 's taking much sanguine view current account deficit 's taken time , '' said Robert Sinche , head currency strategy Bank America New York .</p>
+                <h2 style="color: #2d3748; margin-top: 20px;">BERT Summary</h2>
+                <p style="color: #4a5568;">Dollar gains Greenspan speechThe dollar hit highest level euro almost three months Federal Reserve head said US trade deficit set stabilise.And Alan Greenspan highlighted US government 's willingness curb spending rising household savings factors may help reduce . `` I think chairman 's taking much sanguine view current account deficit 's taken time , '' said Robert Sinche , head currency strategy Bank America New York . The recent falls partly result big budget deficits , well US 's yawning current account gap , need funded buying US bonds assets foreign firms governments .</p>
+                <h2 style="color: #2d3748; margin-top: 20px;">Reference Summary</h2>
+                <p style="color: #4a5568;">The dollar has reached its highest level against the euro in nearly three months after comments from Federal Reserve head Alan Greenspan indicated the US trade deficit may stabilize . Factors contributing to this potential stabilization include the US government 's intent to curb spending and a rise in household savings . Market concerns about the deficit have recently weakened the dollar . However , the currency 's value increased following Greenspan 's optimistic speech in London before the G7 finance ministers ' meeting . Despite this , worries persist over the deficit and China 's fixed currency exchange rate , which continues to make Chinese exports highly competitive . While calls for China to alter its policy have been ignored , some believe the US Federal Reserve 's recent decision to raise interest rates could boost the dollar 's appeal .</p>
+                <h2 style="color: #2d3748; margin-top: 20px;">ROUGE Scores</h2>
+                <table style="width:100%; border-collapse: collapse; margin: 20px 0; margin-bottom: 40px;">
+            <tr style="background-color: #edf2f7;">
+                <th style="padding: 10px 0;">Score Type</th>
+                <th style="padding: 10px 0;">TextRank Score</th> 
+                <th style="padding: 10px 0;">BERT Score</th> 
+                <th style="padding: 10px 0;">Comments</th>
+            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-1-r</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.25</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.22</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Measures the overlap of <b>unigram (single word)</b> sequences between the generated summary and the reference summary, taking into account the recall (R) aspect. A higher recall score indicates that the generated summary contains a significant portion of the information present in the reference summary.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-1-p</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.35</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.29</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Takes into account the precision (P) aspect. A higher precision score indicates that the generated summary contains a higher proportion of information that is directly relevant to the reference summary.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-1-f</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.29</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.25</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Combines both the precision (P) and recall (R) aspects.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-2-r</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.08</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.07</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Focuses on the overlap of <b>bigram (two-word)</b> sequences. Considers the recall (R) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-2-p</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.12</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.10</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Focuses on the overlap of <b>bigram (two-word)</b> sequences. Takes into account the precision (P) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-2-f</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.10</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.09</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Combines both the precision (P) and recall (R) aspects.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-l-r</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.25</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.22</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Measures the overlap of <b>Longest Common Subsequences</b> (LCS) between the generated summary and the reference summary. Considers the recall (R) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-l-p</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.35</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.29</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Measures the overlap of <b>Longest Common Subsequences</b> (LCS). Considers the recall (R) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-l-f</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.29</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.25</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Combines both the precision (P) and recall (R) aspects.</td>
+                            </tr></table>
+            </div>
+         
+            <div style="margin:20px 0; border-top: 1px dashed lightgrey;">
+                <h1 style="color: #2d3748;">Report #2</h1>
+                <h2 style="color: #2d3748;">Original</h2>
+                <p style="color: #4a5568;"><span style="background-color: #9cd59d6b">Gallery</span> <span style="background-color: #9cd59d6b">unveils</span> <span style="background-color: #9cd59d6b">interactive</span> <span style="background-color: #9cd59d6b">treeA</span> <span style="background-color: #9cd59d6b">Christmas</span> <span style="background-color: #9cd59d6b">tree</span> that can <span style="background-color: #9cd59d6b">receive</span> <span style="background-color: #9cd59d6b">text</span> <span style="background-color: #9cd59d6b">messages</span> has been <span style="background-color: #9cd59d6b">unveiled</span> at <span style="background-color: #9cd59d6b">London</span> <span style="background-color: #9cd59d6b">'s</span> <span style="background-color: #9cd59d6b">Tate</span> <span style="background-color: #9cd59d6b">Britain</span> <span style="background-color: #9cd59d6b">art</span> <span style="background-color: #9cd59d6b">gallery.The</span> <span style="background-color: #9cd59d6b">spruce</span> has an <span style="background-color: #9cd59d6b">antenna</span> which can <span style="background-color: #9cd59d6b">receive</span> <span style="background-color: #9cd59d6b">Bluetooth</span> <span style="background-color: #9cd59d6b">texts</span> <span style="background-color: #9cd59d6b">sent</span> by <span style="background-color: #9cd59d6b">visitors</span> to <span style="background-color: #9cd59d6b">the</span> <span style="background-color: #9cd59d6b">Tate</span> <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">The</span> <span style="background-color: #9cd59d6b">messages</span> will be <span style="background-color: #9cd59d6b">``</span> <span style="background-color: #9cd59d6b">unwrapped</span> <span style="background-color: #9cd59d6b">''</span> by <span style="background-color: #9cd59d6b">sculptor</span> <span style="background-color: #9cd59d6b">Richard</span> <span style="background-color: #9cd59d6b">Wentworth</span> <span style="background-color: #9cd59d6b">,</span> who is <span style="background-color: #9cd59d6b">responsible</span> for <span style="background-color: #9cd59d6b">decorating</span> <span style="background-color: #9cd59d6b">the</span> <span style="background-color: #9cd59d6b">tree</span> with <span style="background-color: #9cd59d6b">broken</span> <span style="background-color: #9cd59d6b">plates</span> and <span style="background-color: #9cd59d6b">light</span> <span style="background-color: #9cd59d6b">bulbs</span> <span style="background-color: #9cd59d6b">.</span> It is <span style="background-color: #9cd59d6b">the</span> 17th year that <span style="background-color: #9cd59d6b">the</span> <span style="background-color: #9cd59d6b">gallery</span> has invited an artist to dress their <span style="background-color: #9cd59d6b">Christmas</span> <span style="background-color: #9cd59d6b">tree</span> <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">Artists</span> who have <span style="background-color: #9cd59d6b">decorated</span> <span style="background-color: #9cd59d6b">the</span> <span style="background-color: #9cd59d6b">Tate</span> <span style="background-color: #9cd59d6b">tree</span> in <span style="background-color: #9cd59d6b">previous</span> <span style="background-color: #9cd59d6b">years</span> <span style="background-color: #9cd59d6b">include</span> <span style="background-color: #9cd59d6b">Tracey</span> <span style="background-color: #9cd59d6b">Emin</span> in <span style="background-color: #9cd59d6b">2002.The</span> <span style="background-color: #9cd59d6b">plain</span> <span style="background-color: #9cd59d6b">green</span> <span style="background-color: #9cd59d6b">Norway</span> <span style="background-color: #9cd59d6b">spruce</span> is <span style="background-color: #9cd59d6b">displayed</span> in <span style="background-color: #9cd59d6b">the</span> <span style="background-color: #9cd59d6b">gallery</span> <span style="background-color: #9cd59d6b">'s</span> <span style="background-color: #9cd59d6b">foyer</span> <span style="background-color: #9cd59d6b">.</span> Its <span style="background-color: #9cd59d6b">light</span> bulb adornments are dimmed <span style="background-color: #9cd59d6b">,</span> ordinary domestic ones joined together with string <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">The</span> <span style="background-color: #9cd59d6b">plates</span> <span style="background-color: #9cd59d6b">decorating</span> <span style="background-color: #9cd59d6b">the</span> branches will be auctioned off for <span style="background-color: #9cd59d6b">the</span> children <span style="background-color: #9cd59d6b">'s</span> charity ArtWorks <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">Wentworth</span> worked as an assistant to <span style="background-color: #9cd59d6b">sculptor</span> Henry Moore in <span style="background-color: #9cd59d6b">the</span> late 1960s <span style="background-color: #9cd59d6b">.</span> His reputation as a <span style="background-color: #9cd59d6b">sculptor</span> grew in <span style="background-color: #9cd59d6b">the</span> 1980s <span style="background-color: #9cd59d6b">,</span> while he has been one of <span style="background-color: #9cd59d6b">the</span> most influential teachers during <span style="background-color: #9cd59d6b">the</span> last two decades <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">Wentworth</span> is also known for his photography of mundane <span style="background-color: #9cd59d6b">,</span> everyday subjects such as a cigarette packet jammed under <span style="background-color: #9cd59d6b">the</span> wonky leg of a table <span style="background-color: #9cd59d6b">.</span> </p>
+                <h2 style="color: #2d3748; margin-top: 20px;">TextRank Summary</h2>
+                <p style="color: #4a5568;">The messages `` unwrapped '' sculptor Richard Wentworth , responsible decorating tree broken plates light bulbs . Gallery unveils interactive treeA Christmas tree receive text messages unveiled London 's Tate Britain art gallery.The spruce antenna receive Bluetooth texts sent visitors Tate . Artists decorated Tate tree previous years include Tracey Emin 2002.The plain green Norway spruce displayed gallery 's foyer .</p>
+                <h2 style="color: #2d3748; margin-top: 20px;">BERT Summary</h2>
+                <p style="color: #4a5568;">Artists decorated Tate tree previous years include Tracey Emin 2002.The plain green Norway spruce displayed gallery 's foyer . Wentworth worked assistant sculptor Henry Moore late 1960s . His reputation sculptor grew 1980s , one influential teachers last two decades .</p>
+                <h2 style="color: #2d3748; margin-top: 20px;">Reference Summary</h2>
+                <p style="color: #4a5568;">Tate Britain art gallery in London has revealed a Christmas tree that can receive text messages . The tree , adorned with broken plates and light bulbs by sculptor Richard Wentworth , features an antenna that allows it to receive Bluetooth texts from gallery visitors . This year marks the 17th year the gallery has asked an artist to decorate their Christmas tree , with past participants including Tracey Emin in 2002 . The plates on the tree will be auctioned off for children 's charity ArtWorks . Wentworth , who was an assistant to Henry Moore in the late 1960s and has become a reputable sculptor and influential teacher , is known for his photography of mundane everyday subjects .</p>
+                <h2 style="color: #2d3748; margin-top: 20px;">ROUGE Scores</h2>
+                <table style="width:100%; border-collapse: collapse; margin: 20px 0; margin-bottom: 40px;">
+            <tr style="background-color: #edf2f7;">
+                <th style="padding: 10px 0;">Score Type</th>
+                <th style="padding: 10px 0;">TextRank Score</th> 
+                <th style="padding: 10px 0;">BERT Score</th> 
+                <th style="padding: 10px 0;">Comments</th>
+            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-1-r</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.29</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.17</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Measures the overlap of <b>unigram (single word)</b> sequences between the generated summary and the reference summary, taking into account the recall (R) aspect. A higher recall score indicates that the generated summary contains a significant portion of the information present in the reference summary.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-1-p</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.49</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.37</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Takes into account the precision (P) aspect. A higher precision score indicates that the generated summary contains a higher proportion of information that is directly relevant to the reference summary.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-1-f</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.37</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.23</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Combines both the precision (P) and recall (R) aspects.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-2-r</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.12</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.04</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Focuses on the overlap of <b>bigram (two-word)</b> sequences. Considers the recall (R) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-2-p</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.22</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.11</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Focuses on the overlap of <b>bigram (two-word)</b> sequences. Takes into account the precision (P) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-2-f</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.15</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.05</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Combines both the precision (P) and recall (R) aspects.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-l-r</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.24</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.17</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Measures the overlap of <b>Longest Common Subsequences</b> (LCS) between the generated summary and the reference summary. Considers the recall (R) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-l-p</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.41</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.37</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Measures the overlap of <b>Longest Common Subsequences</b> (LCS). Considers the recall (R) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-l-f</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.31</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.23</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Combines both the precision (P) and recall (R) aspects.</td>
+                            </tr></table>
+            </div>
+         
+            <div style="margin:20px 0; border-top: 1px dashed lightgrey;">
+                <h1 style="color: #2d3748;">Report #3</h1>
+                <h2 style="color: #2d3748;">Original</h2>
+                <p style="color: #4a5568;"><span style="background-color: #9cd59d6b">Labour</span> <span style="background-color: #9cd59d6b">chooses</span> <span style="background-color: #9cd59d6b">ManchesterThe</span> <span style="background-color: #9cd59d6b">Labour</span> <span style="background-color: #9cd59d6b">Party</span> will <span style="background-color: #9cd59d6b">hold</span> its <span style="background-color: #9cd59d6b">2006</span> <span style="background-color: #9cd59d6b">autumn</span> <span style="background-color: #9cd59d6b">conference</span> in <span style="background-color: #9cd59d6b">Manchester</span> and not <span style="background-color: #9cd59d6b">Blackpool</span> <span style="background-color: #9cd59d6b">,</span> <span style="background-color: #9cd59d6b">it</span> has been <span style="background-color: #9cd59d6b">confirmed.The</span> <span style="background-color: #9cd59d6b">much</span> <span style="background-color: #9cd59d6b">trailed</span> <span style="background-color: #9cd59d6b">decision</span> was <span style="background-color: #9cd59d6b">ratified</span> by <span style="background-color: #9cd59d6b">Labour</span> <span style="background-color: #9cd59d6b">'s</span> <span style="background-color: #9cd59d6b">ruling</span> <span style="background-color: #9cd59d6b">National</span> <span style="background-color: #9cd59d6b">Executive</span> <span style="background-color: #9cd59d6b">Committee</span> in a <span style="background-color: #9cd59d6b">break</span> with <span style="background-color: #9cd59d6b">the</span> <span style="background-color: #9cd59d6b">traditional</span> <span style="background-color: #9cd59d6b">choice</span> of a <span style="background-color: #9cd59d6b">seaside</span> <span style="background-color: #9cd59d6b">venue</span> <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">It</span> will be <span style="background-color: #9cd59d6b">the</span> <span style="background-color: #9cd59d6b">first</span> <span style="background-color: #9cd59d6b">time</span> <span style="background-color: #9cd59d6b">since</span> <span style="background-color: #9cd59d6b">1917</span> that <span style="background-color: #9cd59d6b">the</span> <span style="background-color: #9cd59d6b">party</span> has <span style="background-color: #9cd59d6b">chosen</span> <span style="background-color: #9cd59d6b">Manchester</span> to <span style="background-color: #9cd59d6b">host</span> <span style="background-color: #9cd59d6b">the</span> <span style="background-color: #9cd59d6b">annual</span> <span style="background-color: #9cd59d6b">event</span> <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">Blackpool</span> will get <span style="background-color: #9cd59d6b">the</span> <span style="background-color: #9cd59d6b">much</span> smaller February spring <span style="background-color: #9cd59d6b">conference</span> instead in what will be seen as a placatory move.For years <span style="background-color: #9cd59d6b">the</span> main political parties have rotated between <span style="background-color: #9cd59d6b">Blackpool</span> <span style="background-color: #9cd59d6b">,</span> <span style="background-color: #9cd59d6b">Bournemouth</span> and <span style="background-color: #9cd59d6b">Brighton</span> <span style="background-color: #9cd59d6b">.</span> And <span style="background-color: #9cd59d6b">the</span> news <span style="background-color: #9cd59d6b">the</span> <span style="background-color: #9cd59d6b">much</span> larger <span style="background-color: #9cd59d6b">annual</span> <span style="background-color: #9cd59d6b">conference</span> is not to gather in <span style="background-color: #9cd59d6b">Blackpool</span> will be seen as a blow in <span style="background-color: #9cd59d6b">the</span> coastal resort <span style="background-color: #9cd59d6b">.</span> In 1998 <span style="background-color: #9cd59d6b">the</span> <span style="background-color: #9cd59d6b">party</span> <span style="background-color: #9cd59d6b">said</span> <span style="background-color: #9cd59d6b">it</span> would not return to <span style="background-color: #9cd59d6b">Blackpool</span> but did so in 2002 <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">The</span> <span style="background-color: #9cd59d6b">following</span> <span style="background-color: #9cd59d6b">year</span> <span style="background-color: #9cd59d6b">Bournemouth</span> <span style="background-color: #9cd59d6b">hosted</span> <span style="background-color: #9cd59d6b">the</span> <span style="background-color: #9cd59d6b">event</span> before <span style="background-color: #9cd59d6b">the</span> <span style="background-color: #9cd59d6b">party</span> <span style="background-color: #9cd59d6b">signed</span> a <span style="background-color: #9cd59d6b">two</span> <span style="background-color: #9cd59d6b">year</span> <span style="background-color: #9cd59d6b">deal</span> for <span style="background-color: #9cd59d6b">Brighton</span> to <span style="background-color: #9cd59d6b">host</span> <span style="background-color: #9cd59d6b">the</span> <span style="background-color: #9cd59d6b">autumn</span> <span style="background-color: #9cd59d6b">conference.Colin</span> <span style="background-color: #9cd59d6b">Asplin</span> <span style="background-color: #9cd59d6b">,</span> <span style="background-color: #9cd59d6b">Blackpool</span> <span style="background-color: #9cd59d6b">Hotel</span> <span style="background-color: #9cd59d6b">Association</span> <span style="background-color: #9cd59d6b">said</span> <span style="background-color: #9cd59d6b">:</span> <span style="background-color: #9cd59d6b">``</span> <span style="background-color: #9cd59d6b">We</span> have <span style="background-color: #9cd59d6b">tried</span> very <span style="background-color: #9cd59d6b">hard</span> to <span style="background-color: #9cd59d6b">make</span> <span style="background-color: #9cd59d6b">sure</span> they <span style="background-color: #9cd59d6b">come</span> <span style="background-color: #9cd59d6b">back</span> to <span style="background-color: #9cd59d6b">Blackpool</span> <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">``</span> Obviously <span style="background-color: #9cd59d6b">we</span> have failed in that <span style="background-color: #9cd59d6b">.</span> I just hope <span style="background-color: #9cd59d6b">Manchester</span> can handle <span style="background-color: #9cd59d6b">the</span> crowds <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">``</span> <span style="background-color: #9cd59d6b">It</span> amazes me that <span style="background-color: #9cd59d6b">the</span> <span style="background-color: #9cd59d6b">Labour</span> <span style="background-color: #9cd59d6b">Party</span> <span style="background-color: #9cd59d6b">,</span> which is a working class <span style="background-color: #9cd59d6b">party</span> <span style="background-color: #9cd59d6b">,</span> does n't want to <span style="background-color: #9cd59d6b">come</span> to <span style="background-color: #9cd59d6b">the</span> main working class resort in <span style="background-color: #9cd59d6b">the</span> country <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">''</span> <span style="background-color: #9cd59d6b">The</span> exact cost to <span style="background-color: #9cd59d6b">Blackpool</span> in terms of lost revenue for <span style="background-color: #9cd59d6b">hotel</span> accommodation is not yet known but <span style="background-color: #9cd59d6b">it</span> is thought that block bookings will be taken at <span style="background-color: #9cd59d6b">the</span> major <span style="background-color: #9cd59d6b">Manchester</span> hotels after <span style="background-color: #9cd59d6b">the</span> official announcement <span style="background-color: #9cd59d6b">.</span> </p>
+                <h2 style="color: #2d3748; margin-top: 20px;">TextRank Summary</h2>
+                <p style="color: #4a5568;">The following year Bournemouth hosted event party signed two year deal Brighton host autumn conference.Colin Asplin , Blackpool Hotel Association said : `` We tried hard make sure come back Blackpool . Labour chooses ManchesterThe Labour Party hold 2006 autumn conference Manchester Blackpool , confirmed.The much trailed decision ratified Labour 's ruling National Executive Committee break traditional choice seaside venue . It first time since 1917 party chosen Manchester host annual event .</p>
+                <h2 style="color: #2d3748; margin-top: 20px;">BERT Summary</h2>
+                <p style="color: #4a5568;">The following year Bournemouth hosted event party signed two year deal Brighton host autumn conference.Colin Asplin , Blackpool Hotel Association said : `` We tried hard make sure come back Blackpool . It first time since 1917 party chosen Manchester host annual event . I hope Manchester handle crowds .</p>
+                <h2 style="color: #2d3748; margin-top: 20px;">Reference Summary</h2>
+                <p style="color: #4a5568;">The Labour Party has confirmed that it will hold its 2006 autumn conference in Manchester , marking a departure from the tradition of choosing a seaside venue . This decision , approved by Labour 's ruling National Executive Committee , makes it the first time since 1917 that Manchester has been selected to host the annual event . While the smaller February spring conference will be held in Blackpool as a compromise , the loss of the larger annual conference is seen as a significant blow to the coastal resort . Colin Asplin of the Blackpool Hotel Association expressed hope that Manchester would be able to accommodate the event . The exact financial impact on Blackpool in terms of lost hotel accommodation revenue is yet to be determined .</p>
+                <h2 style="color: #2d3748; margin-top: 20px;">ROUGE Scores</h2>
+                <table style="width:100%; border-collapse: collapse; margin: 20px 0; margin-bottom: 40px;">
+            <tr style="background-color: #edf2f7;">
+                <th style="padding: 10px 0;">Score Type</th>
+                <th style="padding: 10px 0;">TextRank Score</th> 
+                <th style="padding: 10px 0;">BERT Score</th> 
+                <th style="padding: 10px 0;">Comments</th>
+            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-1-r</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.31</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.20</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Measures the overlap of <b>unigram (single word)</b> sequences between the generated summary and the reference summary, taking into account the recall (R) aspect. A higher recall score indicates that the generated summary contains a significant portion of the information present in the reference summary.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-1-p</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.44</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.40</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Takes into account the precision (P) aspect. A higher precision score indicates that the generated summary contains a higher proportion of information that is directly relevant to the reference summary.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-1-f</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.37</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.27</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Combines both the precision (P) and recall (R) aspects.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-2-r</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.11</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.07</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Focuses on the overlap of <b>bigram (two-word)</b> sequences. Considers the recall (R) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-2-p</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.19</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.17</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Focuses on the overlap of <b>bigram (two-word)</b> sequences. Takes into account the precision (P) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-2-f</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.14</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.10</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Combines both the precision (P) and recall (R) aspects.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-l-r</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.30</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.20</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Measures the overlap of <b>Longest Common Subsequences</b> (LCS) between the generated summary and the reference summary. Considers the recall (R) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-l-p</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.42</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.40</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Measures the overlap of <b>Longest Common Subsequences</b> (LCS). Considers the recall (R) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-l-f</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.35</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.27</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Combines both the precision (P) and recall (R) aspects.</td>
+                            </tr></table>
+            </div>
+         
+            <div style="margin:20px 0; border-top: 1px dashed lightgrey;">
+                <h1 style="color: #2d3748;">Report #4</h1>
+                <h2 style="color: #2d3748;">Original</h2>
+                <p style="color: #4a5568;"><span style="background-color: #9cd59d6b">O'Sullivan</span> <span style="background-color: #9cd59d6b">commits</span> to <span style="background-color: #9cd59d6b">Dublin</span> <span style="background-color: #9cd59d6b">raceSonia</span> <span style="background-color: #9cd59d6b">O'Sullivan</span> will <span style="background-color: #9cd59d6b">seek</span> to <span style="background-color: #9cd59d6b">regain</span> her <span style="background-color: #9cd59d6b">title</span> at the <span style="background-color: #9cd59d6b">Bupa</span> <span style="background-color: #9cd59d6b">Great</span> <span style="background-color: #9cd59d6b">Ireland</span> <span style="background-color: #9cd59d6b">Run</span> on <span style="background-color: #9cd59d6b">9</span> <span style="background-color: #9cd59d6b">April</span> in <span style="background-color: #9cd59d6b">Dublin.The</span> <span style="background-color: #9cd59d6b">35-year-old</span> was <span style="background-color: #9cd59d6b">beaten</span> into <span style="background-color: #9cd59d6b">fourth</span> at <span style="background-color: #9cd59d6b">last</span> <span style="background-color: #9cd59d6b">year</span> <span style="background-color: #9cd59d6b">'s</span> <span style="background-color: #9cd59d6b">event</span> <span style="background-color: #9cd59d6b">,</span> having won it a <span style="background-color: #9cd59d6b">year</span> <span style="background-color: #9cd59d6b">earlier</span> <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">``</span> I understand she <span style="background-color: #9cd59d6b">'s</span> had a solid winter <span style="background-color: #9cd59d6b">'s</span> training down in Australia after recovering from a minor injury <span style="background-color: #9cd59d6b">,</span> <span style="background-color: #9cd59d6b">''</span> said <span style="background-color: #9cd59d6b">race</span> director Matthew Turnbull <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">Mark</span> <span style="background-color: #9cd59d6b">Carroll</span> <span style="background-color: #9cd59d6b">,</span> <span style="background-color: #9cd59d6b">Irish</span> <span style="background-color: #9cd59d6b">record</span> <span style="background-color: #9cd59d6b">holder</span> at <span style="background-color: #9cd59d6b">3km</span> <span style="background-color: #9cd59d6b">,</span> <span style="background-color: #9cd59d6b">5km</span> and <span style="background-color: #9cd59d6b">10km</span> <span style="background-color: #9cd59d6b">,</span> will <span style="background-color: #9cd59d6b">make</span> his <span style="background-color: #9cd59d6b">debut</span> in the <span style="background-color: #9cd59d6b">mass</span> <span style="background-color: #9cd59d6b">participation</span> <span style="background-color: #9cd59d6b">10km</span> <span style="background-color: #9cd59d6b">race</span> <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">Carroll</span> has stepped up his form in recent weeks and in late January scored an impressive 3,000m victory over leading American Alan Webb in Boston <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">Carroll</span> will be <span style="background-color: #9cd59d6b">facing</span> <span style="background-color: #9cd59d6b">stiff</span> <span style="background-color: #9cd59d6b">competition</span> from <span style="background-color: #9cd59d6b">Australian</span> <span style="background-color: #9cd59d6b">Craig</span> <span style="background-color: #9cd59d6b">Mottram</span> <span style="background-color: #9cd59d6b">,</span> <span style="background-color: #9cd59d6b">winner</span> in <span style="background-color: #9cd59d6b">Dublin</span> for the <span style="background-color: #9cd59d6b">last</span> <span style="background-color: #9cd59d6b">two</span> <span style="background-color: #9cd59d6b">years</span> <span style="background-color: #9cd59d6b">.</span> </p>
+                <h2 style="color: #2d3748; margin-top: 20px;">TextRank Summary</h2>
+                <p style="color: #4a5568;">Carroll facing stiff competition Australian Craig Mottram , winner Dublin last two years . Mark Carroll , Irish record holder 3km , 5km 10km , make debut mass participation 10km race . O'Sullivan commits Dublin raceSonia O'Sullivan seek regain title Bupa Great Ireland Run 9 April Dublin.The 35-year-old beaten fourth last year 's event , year earlier .</p>
+                <h2 style="color: #2d3748; margin-top: 20px;">BERT Summary</h2>
+                <p style="color: #4a5568;">`` I understand 's solid winter 's training Australia recovering minor injury , '' said race director Matthew Turnbull . Mark Carroll , Irish record holder 3km , 5km 10km , make debut mass participation 10km race . Carroll facing stiff competition Australian Craig Mottram , winner Dublin last two years .</p>
+                <h2 style="color: #2d3748; margin-top: 20px;">Reference Summary</h2>
+                <p style="color: #4a5568;">Irish long-distance runner Sonia O'Sullivan aims to reclaim her title at the Bupa Great Ireland Run in Dublin on April 9th . O'Sullivan , who was the champion two years ago , ended up in fourth place in last year 's event . Race director Matthew Turnbull reports that O'Sullivan has had a productive winter training season in Australia following a minor injury . The race will also see Mark Carroll , the Irish record holder for 3km , 5km , and 10km , participating for the first time in the 10km mass participation race . Carroll , who has been demonstrating impressive form recently , will be up against tough competition , including Australian Craig Mottram , the two-time winner of the Dublin race .</p>
+                <h2 style="color: #2d3748; margin-top: 20px;">ROUGE Scores</h2>
+                <table style="width:100%; border-collapse: collapse; margin: 20px 0; margin-bottom: 40px;">
+            <tr style="background-color: #edf2f7;">
+                <th style="padding: 10px 0;">Score Type</th>
+                <th style="padding: 10px 0;">TextRank Score</th> 
+                <th style="padding: 10px 0;">BERT Score</th> 
+                <th style="padding: 10px 0;">Comments</th>
+            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-1-r</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.28</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.26</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Measures the overlap of <b>unigram (single word)</b> sequences between the generated summary and the reference summary, taking into account the recall (R) aspect. A higher recall score indicates that the generated summary contains a significant portion of the information present in the reference summary.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-1-p</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.56</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.56</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Takes into account the precision (P) aspect. A higher precision score indicates that the generated summary contains a higher proportion of information that is directly relevant to the reference summary.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-1-f</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.38</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.36</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Combines both the precision (P) and recall (R) aspects.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-2-r</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.07</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.07</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Focuses on the overlap of <b>bigram (two-word)</b> sequences. Considers the recall (R) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-2-p</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.15</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.17</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Focuses on the overlap of <b>bigram (two-word)</b> sequences. Takes into account the precision (P) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-2-f</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.10</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.10</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Combines both the precision (P) and recall (R) aspects.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-l-r</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.28</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.22</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Measures the overlap of <b>Longest Common Subsequences</b> (LCS) between the generated summary and the reference summary. Considers the recall (R) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-l-p</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.56</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.46</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Measures the overlap of <b>Longest Common Subsequences</b> (LCS). Considers the recall (R) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-l-f</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.38</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.29</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Combines both the precision (P) and recall (R) aspects.</td>
+                            </tr></table>
+            </div>
+         
+            <div style="margin:20px 0; border-top: 1px dashed lightgrey;">
+                <h1 style="color: #2d3748;">Report #5</h1>
+                <h2 style="color: #2d3748;">Original</h2>
+                <p style="color: #4a5568;"><span style="background-color: #9cd59d6b">Microsoft</span> <span style="background-color: #9cd59d6b">seeking</span> <span style="background-color: #9cd59d6b">spyware</span> <span style="background-color: #9cd59d6b">trojanMicrosoft</span> is <span style="background-color: #9cd59d6b">investigating</span> a <span style="background-color: #9cd59d6b">trojan</span> <span style="background-color: #9cd59d6b">program</span> that <span style="background-color: #9cd59d6b">attempts</span> to <span style="background-color: #9cd59d6b">switch</span> off <span style="background-color: #9cd59d6b">the</span> <span style="background-color: #9cd59d6b">firm</span> <span style="background-color: #9cd59d6b">'s</span> <span style="background-color: #9cd59d6b">anti-spyware</span> <span style="background-color: #9cd59d6b">software.The</span> <span style="background-color: #9cd59d6b">spyware</span> <span style="background-color: #9cd59d6b">tool</span> was only <span style="background-color: #9cd59d6b">released</span> by <span style="background-color: #9cd59d6b">Microsoft</span> in <span style="background-color: #9cd59d6b">the</span> <span style="background-color: #9cd59d6b">last</span> few <span style="background-color: #9cd59d6b">weeks</span> and has been <span style="background-color: #9cd59d6b">downloaded</span> by <span style="background-color: #9cd59d6b">six</span> <span style="background-color: #9cd59d6b">million</span> <span style="background-color: #9cd59d6b">people</span> <span style="background-color: #9cd59d6b">.</span> Stephen Toulouse <span style="background-color: #9cd59d6b">,</span> a security manager at <span style="background-color: #9cd59d6b">Microsoft</span> <span style="background-color: #9cd59d6b">,</span> <span style="background-color: #9cd59d6b">said</span> <span style="background-color: #9cd59d6b">the</span> malicious <span style="background-color: #9cd59d6b">program</span> was <span style="background-color: #9cd59d6b">called</span> Bankash-A <span style="background-color: #9cd59d6b">Trojan</span> and was being sent as an e-mail attachment <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">Microsoft</span> <span style="background-color: #9cd59d6b">said</span> it did not <span style="background-color: #9cd59d6b">believe</span> <span style="background-color: #9cd59d6b">the</span> <span style="background-color: #9cd59d6b">program</span> was <span style="background-color: #9cd59d6b">widespread</span> and <span style="background-color: #9cd59d6b">recommended</span> <span style="background-color: #9cd59d6b">users</span> to <span style="background-color: #9cd59d6b">use</span> an <span style="background-color: #9cd59d6b">anti-virus</span> <span style="background-color: #9cd59d6b">program</span> <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">The</span> <span style="background-color: #9cd59d6b">program</span> <span style="background-color: #9cd59d6b">attempts</span> to <span style="background-color: #9cd59d6b">disable</span> or <span style="background-color: #9cd59d6b">delete</span> <span style="background-color: #9cd59d6b">Microsoft</span> <span style="background-color: #9cd59d6b">'s</span> <span style="background-color: #9cd59d6b">anti-spyware</span> <span style="background-color: #9cd59d6b">tool</span> and <span style="background-color: #9cd59d6b">suppress</span> <span style="background-color: #9cd59d6b">warning</span> <span style="background-color: #9cd59d6b">messages</span> <span style="background-color: #9cd59d6b">given</span> to <span style="background-color: #9cd59d6b">users.It</span> <span style="background-color: #9cd59d6b">may</span> <span style="background-color: #9cd59d6b">also</span> <span style="background-color: #9cd59d6b">try</span> to <span style="background-color: #9cd59d6b">steal</span> <span style="background-color: #9cd59d6b">online</span> <span style="background-color: #9cd59d6b">banking</span> <span style="background-color: #9cd59d6b">passwords</span> or other <span style="background-color: #9cd59d6b">personal</span> <span style="background-color: #9cd59d6b">information</span> by <span style="background-color: #9cd59d6b">tracking</span> <span style="background-color: #9cd59d6b">users</span> <span style="background-color: #9cd59d6b">'</span> <span style="background-color: #9cd59d6b">keystrokes.Microsoft</span> <span style="background-color: #9cd59d6b">said</span> in a <span style="background-color: #9cd59d6b">statement</span> it is <span style="background-color: #9cd59d6b">investigating</span> what it <span style="background-color: #9cd59d6b">called</span> a <span style="background-color: #9cd59d6b">criminal</span> <span style="background-color: #9cd59d6b">attack</span> on its <span style="background-color: #9cd59d6b">software</span> <span style="background-color: #9cd59d6b">.</span> Earlier this week <span style="background-color: #9cd59d6b">,</span> <span style="background-color: #9cd59d6b">Microsoft</span> <span style="background-color: #9cd59d6b">said</span> it would buy <span style="background-color: #9cd59d6b">anti-virus</span> <span style="background-color: #9cd59d6b">software</span> maker Sybari <span style="background-color: #9cd59d6b">Software</span> to improve its security in its Windows and e-mail <span style="background-color: #9cd59d6b">software</span> <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">Microsoft</span> has <span style="background-color: #9cd59d6b">said</span> it plans to offer its own paid-for <span style="background-color: #9cd59d6b">anti-virus</span> <span style="background-color: #9cd59d6b">software</span> but it has not yet set a date for its release <span style="background-color: #9cd59d6b">.</span> <span style="background-color: #9cd59d6b">The</span> <span style="background-color: #9cd59d6b">anti-spyware</span> <span style="background-color: #9cd59d6b">program</span> being targeted is currently only in beta form and aims to help <span style="background-color: #9cd59d6b">users</span> find and remove <span style="background-color: #9cd59d6b">spyware</span> <span style="background-color: #9cd59d6b">-</span> programs which monitor internet <span style="background-color: #9cd59d6b">use</span> <span style="background-color: #9cd59d6b">,</span> causes advert pop-ups and slow a PC <span style="background-color: #9cd59d6b">'s</span> performance <span style="background-color: #9cd59d6b">.</span> </p>
+                <h2 style="color: #2d3748; margin-top: 20px;">TextRank Summary</h2>
+                <p style="color: #4a5568;">Microsoft said believe program widespread recommended users use anti-virus program . The program attempts disable delete Microsoft 's anti-spyware tool suppress warning messages given users.It may also try steal online banking passwords personal information tracking users ' keystrokes.Microsoft said statement investigating called criminal attack software . Microsoft seeking spyware trojanMicrosoft investigating trojan program attempts switch firm 's anti-spyware software.The spyware tool released Microsoft last weeks downloaded six million people .</p>
+                <h2 style="color: #2d3748; margin-top: 20px;">BERT Summary</h2>
+                <p style="color: #4a5568;">The program attempts disable delete Microsoft 's anti-spyware tool suppress warning messages given users.It may also try steal online banking passwords personal information tracking users ' keystrokes.Microsoft said statement investigating called criminal attack software . Microsoft said believe program widespread recommended users use anti-virus program . Microsoft said plans offer paid-for anti-virus software yet set date release .</p>
+                <h2 style="color: #2d3748; margin-top: 20px;">Reference Summary</h2>
+                <p style="color: #4a5568;">Microsoft is currently investigating a trojan named Bankash-A Trojan , which tries to deactivate the company 's recently released anti-spyware software . The anti-spyware tool has already been downloaded by six million users . This malicious program , distributed via email attachments , aims not only to disable or delete Microsoft 's anti-spyware tool and suppress user warning messages but also attempts to steal personal data such as online banking passwords by tracking keystrokes . Although Microsoft believes this threat is n't widespread , they recommend the use of an anti-virus program . This comes as the company plans to acquire anti-virus software creator Sybari Software to bolster the security of its Windows and email software , and also intends to offer its own paid anti-virus software in the future .</p>
+                <h2 style="color: #2d3748; margin-top: 20px;">ROUGE Scores</h2>
+                <table style="width:100%; border-collapse: collapse; margin: 20px 0; margin-bottom: 40px;">
+            <tr style="background-color: #edf2f7;">
+                <th style="padding: 10px 0;">Score Type</th>
+                <th style="padding: 10px 0;">TextRank Score</th> 
+                <th style="padding: 10px 0;">BERT Score</th> 
+                <th style="padding: 10px 0;">Comments</th>
+            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-1-r</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.32</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.28</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Measures the overlap of <b>unigram (single word)</b> sequences between the generated summary and the reference summary, taking into account the recall (R) aspect. A higher recall score indicates that the generated summary contains a significant portion of the information present in the reference summary.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-1-p</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.56</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.57</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Takes into account the precision (P) aspect. A higher precision score indicates that the generated summary contains a higher proportion of information that is directly relevant to the reference summary.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-1-f</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.40</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.38</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Combines both the precision (P) and recall (R) aspects.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-2-r</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.07</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.05</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Focuses on the overlap of <b>bigram (two-word)</b> sequences. Considers the recall (R) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-2-p</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.12</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.11</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Focuses on the overlap of <b>bigram (two-word)</b> sequences. Takes into account the precision (P) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-2-f</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.09</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.07</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Combines both the precision (P) and recall (R) aspects.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-l-r</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.30</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.26</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Measures the overlap of <b>Longest Common Subsequences</b> (LCS) between the generated summary and the reference summary. Considers the recall (R) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-l-p</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.54</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.52</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Measures the overlap of <b>Longest Common Subsequences</b> (LCS). Considers the recall (R) aspect.</td>
+                            </tr>
+                            <tr style="border-top: 1px solid #e2e8f0;">
+                                <td style='text-align:center; padding: 10px 0;'>rouge-l-f</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.39</td>
+                                <td style='text-align:center; padding: 10px 0;'>0.35</td>
+                                <td style='text-align:center; padding: 10px 0; font-size: 12px; width: 50%'>
+                                Combines both the precision (P) and recall (R) aspects.</td>
+                            </tr></table>
+            </div>
+        </div></div>
