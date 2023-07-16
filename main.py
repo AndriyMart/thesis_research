@@ -103,10 +103,18 @@ def calculate_rouge_scores(hypothesis, reference):
 rouge_scores = calculate_rouge_scores(summary, reference_summary)
 print(rouge_scores)
 
-
 def normalize(s):
-    # Lowercase, remove punctuation, and remove extra whitespaces
-    return re.sub(' +', ' ', s.lower().translate(str.maketrans('', '', string.punctuation)).strip())
+    # Lowercase, remove punctuation (except within words), and remove extra whitespaces
+    s = s.lower().translate(str.maketrans('', '', string.punctuation.replace("$", ""))).strip()
+    return re.sub(' +', ' ', s)
+
+def sliding_window(tokens, n=3):
+    # Generate sequences of up to n consecutive tokens
+    sequences = set()
+    for i in range(len(tokens)):
+        for j in range(i+1, min(i+n+1, len(tokens)+1)):
+            sequences.add(" ".join(tokens[i:j]))
+    return sequences
 
 def highlight_matches(reference, summary, output_html):
     # Normalize the texts
@@ -117,22 +125,31 @@ def highlight_matches(reference, summary, output_html):
     reference_tokens = word_tokenize(reference_norm)
     summary_tokens = word_tokenize(summary_norm)
 
-    # Use difflib to find common words
-    matcher = difflib.SequenceMatcher(None, reference_tokens, summary_tokens)
-    common_words = set([reference_tokens[match.a] for match in matcher.get_matching_blocks() if match.size > 0])
+    # Use a "sliding window" to find common words and phrases
+    common_terms = sliding_window(reference_tokens) & sliding_window(summary_tokens)
 
     # Create HTML for reference and summary
-    def generate_html(raw_text, norm_text, highlight_words):
+    def generate_html(raw_text, norm_text, highlight_terms):
         html = ""
-        for raw_word, norm_word in zip(word_tokenize(raw_text), word_tokenize(norm_text)):
-            if norm_word in highlight_words:
-                html += '<span style="background-color: #FFFF00">' + raw_word + '</span> '
-            else:
-                html += raw_word + ' '
+        norm_tokens = word_tokenize(norm_text)
+        raw_tokens = word_tokenize(raw_text)
+        i = 0
+        while i < len(norm_tokens):
+            matched = False
+            for j in range(len(norm_tokens), i, -1):
+                phrase = " ".join(norm_tokens[i:j])
+                if phrase in highlight_terms:
+                    html += '<span style="background-color: #FFFF00">' + " ".join(raw_tokens[i:j]) + '</span> '
+                    i = j
+                    matched = True
+                    break
+            if not matched:
+                html += raw_tokens[i] + ' '
+                i += 1
         return html
 
-    reference_html = generate_html(reference, reference_norm, common_words)
-    summary_html = generate_html(summary, summary_norm, common_words)
+    reference_html = generate_html(reference, reference_norm, common_terms)
+    summary_html = generate_html(summary, summary_norm, common_terms)
 
     html = """
     <h1>Reference</h1>
